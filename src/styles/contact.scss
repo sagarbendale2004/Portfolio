@@ -1,0 +1,70 @@
+.contact {
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+  
+      .content {
+        flex: 1 1 30rem;
+        padding: 4rem;
+        padding-bottom: 0;
+  
+        .title {
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 3rem;
+          padding-bottom: 2rem;
+        }
+  
+        .info {
+          .icons {
+            display: flex;
+            align-items: center;
+            margin-left: -3rem;
+          }
+  
+          h3 {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            color: #eee;
+            padding: 1rem 0;
+            font-weight: normal;
+            text-transform: lowercase;
+  
+            i {
+              padding-right: 1rem;
+              color: var(--yellow);
+            }
+          }
+        }
+      }
+  
+      form {
+        flex: 1 1 45rem;
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 4rem;
+  
+        .box {
+          padding: 1rem;
+          margin: 1rem 0;
+          background: #3333;
+          color: #fff;
+          text-transform: none;
+          font-size: 1.7rem;
+          width: 100%;
+  
+          &::placeholder {
+            text-transform: capitalize;
+          }
+        }
+  
+        .message {
+          height: 15rem;
+          resize: none;
+        }
+      }
+    }
+  }
