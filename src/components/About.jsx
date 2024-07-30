@@ -31,7 +31,7 @@ function About() {
           <h3>
             <span> Language : </span> English,Hindi,Marathi{" "}
           </h3>
-          <a href="../bio.pdf">
+          <a href="https://drive.google.com/file/d/1rmWJONNG6zrtwYN7iR0KesIQ8mBZuvEx/view?usp=drive_link">
             <button className="btn">
               Download CV <i className="fas fa-download"></i>
             </button>
