@@ -15,18 +15,19 @@ function About() {
             <span> Name : </span> Bendale Sagar Rajesh
           </h3>
           <h3>
-            <span> Age : </span> 20{" "}
+            <span> Age : </span> 21{" "}
           </h3>
           <h3>
-            <span> Qualification : </span> TY-Integrated MCA{" "}
+            <span> Qualification : </span> Integrated-MCA (Fourth Year){" "}
           </h3>
           <h3>
             <span> Hobbies : </span> Playing Chess, Reading Books, Learning New
             Technologies, Traveling{" "}
           </h3>
           <h3>
-            <span> Skills : </span> React, Javascript, Html, Css, Chakra-ui,
-            Scss{" "}
+            <span> Technical Skills : </span> React, Javascript, Html, Css, Chakra-ui,
+            Scss. <br/>
+            <span> Basic Understandings - (Nodejs, Express, MongoDb) <span/>{" "}
           </h3>
           <h3>
             <span> Language : </span> English,Hindi,Marathi{" "}
