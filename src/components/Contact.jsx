@@ -1,28 +1,52 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "../styles/contact.scss";
 import "../styles/mediaQueries.scss";
 
 function Contact() {
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxy16CRUGHH6oWwK7ApYuJkQvltTn-h5bhCoevkMYOsvJSsjdcoAxyCQVbW9k45JOiZBQ/exec"; // Replace with your actual Google Apps Script URL
+    const form = formRef.current;
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      })
+        .then((response) => {
+          alert("Message sent successfully!");
+          form.reset();
+        })
+        .catch((error) => {
+          alert("Failed to send message. Try again.");
+          console.error("Error!", error.message);
+        });
+    };
+
+    form.addEventListener("submit", handleSubmit);
+    return () => form.removeEventListener("submit", handleSubmit);
+  }, []);
+
   return (
     <section className="contact" id="contact">
       <h1 className="heading">
-        {" "}
         contact <span>me</span>
       </h1>
-
       <div className="row">
         <div className="content">
           <h1 className="title">contact info</h1>
-
           <div className="info">
             <h3>
-              <i className="fas fa-envelope"></i> sagarbendale2004@gmail.com{" "}
+              <i className="fas fa-envelope"></i> sagarbendale2004@gmail.com
             </h3>
             <h3>
-              <i className="fas fa-phone"></i> +91 7666856451{" "}
+              <i className="fas fa-phone"></i> +91 7666856451
             </h3>
             <h3>
-              <i className="fas fa-map-marker-alt"></i> Jalgaon, india - 425001{" "}
+              <i className="fas fa-map-marker-alt"></i> Jalgaon, India - 425001
             </h3>
             <div className="icons">
               <a
@@ -41,20 +65,36 @@ function Contact() {
           </div>
         </div>
 
-        <form action="">
-          <input type="text" placeholder="name" className="box" />
-          <input type="email" placeholder="email" className="box" />
-          <input type="text" placeholder="project" className="box" />
+        <form name="submit-to-google-sheet" ref={formRef}>
+          <input
+            type="text"
+            name="Name"
+            placeholder="name"
+            className="box"
+            required
+          />
+          <input
+            type="email"
+            name="Email"
+            placeholder="email"
+            className="box"
+            required
+          />
+          <input
+            type="text"
+            name="Project"
+            placeholder="project"
+            className="box"
+          />
           <textarea
-            name=""
-            id=""
+            name="Message"
             cols="30"
             rows="10"
             className="box message"
             placeholder="message"
+            required
           ></textarea>
           <button type="submit" className="btn">
-            {" "}
             send <i className="fas fa-paper-plane"></i>
           </button>
         </form>
