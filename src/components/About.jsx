@@ -18,14 +18,14 @@ function About() {
             <span> Age: </span> 21
           </h3>
           <h3>
-            <span> Qualification: </span> Integrated-MCA (Fourth Year)
+            <span> Qualification: </span> Integrated-MCA (Final Year)
           </h3>
           <h3>
             <span> Hobbies: </span> Playing Chess, Reading Books, Learning New
             Technologies, Traveling
           </h3>
           <h3>
-            <span> Technical Skills: </span> React, JavaScript, HTML, CSS, Chakra-UI,
+            <span> Technical Skills: </span> ASP.NET, ADO.NET, React, JavaScript, HTML, CSS, Chakra-UI,
             SCSS. <br />
             <span> Basic Understandings: </span> Node.js, Express, MongoDB
           </h3>
