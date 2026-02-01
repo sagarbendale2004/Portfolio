@@ -38,6 +38,14 @@ function Education() {
       <h4>my Internships -</h4>
 
       <div className="box-container internships-container">
+
+       <div className="box">
+          <i className="fas fa-graduation-cap"></i>
+          <span>2025-Present</span>
+          <h3>Software Developer Trainee</h3>
+          <p>KCES's IMR Infotech</p>
+        </div>
+
         <div className="box">
           <i className="fas fa-graduation-cap"></i>
           <span>2023</span>
